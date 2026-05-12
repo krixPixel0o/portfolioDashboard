@@ -1,171 +1,253 @@
 <!DOCTYPE html>
 
-<html lang = "en">
-    <head>
-        <meta charset = "UTF-8">
+<html lang="en">
 
-        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+<head>
 
-        <title>La Portfolio</title>
+    <meta charset="UTF-8">
 
-        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/styles.css')}}">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
+    <title>La Portfolio</title>
 
-    </head>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/styles.css') }}">
 
-    <body>
+</head>
 
-        <nav>
+<body>
 
-            <h1>La Portfolio</h1>
+    <!-- NAVBAR -->
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <nav>
 
-        </nav>
+        <h1>La Portfolio</h1>
 
-    <!-- =========================
-         HOME SECTION
-    ========================== -->
+        <ul>
 
-        <section class="hero" id="home">
+            <li><a href="#home">Home</a></li>
 
-            <h2>Hello, I am Aniruddh!</h2>
+            <li><a href="#about">About</a></li>
 
-            <p>
-                Full Stack Developer using
-                HTML, CSS, JavaScript, Flask, and MySQL
-            </p>
+            <li><a href="#skills">Skills</a></li>
 
-            <button id="project-btn">
-                Explore Projects
-            </button>
+            <li><a href="#projects">Projects</a></li>
 
-        </section>
+            <li><a href="#contact">Contact</a></li>
 
-    <!-- =========================
-         ABOUT SECTION
-    ========================== -->
+        </ul>
 
-        <section class="about-section" id="about">
+    </nav>
 
-            <h2>About Me</h2>
+    <!-- HERO SECTION -->
 
-            <p>
-                I am a passionate Full Stack Developer
-                interested in frontend development,
-                backend engineering, and database systems.
-            </p>
+    <section class="hero" id="home">
 
-        </section>
+        <h2>Hello, I am Aniruddh!</h2>
 
-    <!-- =========================
-         SKILLS SECTION
-    ========================== -->
+        <p>
+            Full Stack Developer using
+            HTML, CSS, JavaScript, Flask, and MySQL
+        </p>
 
-        <section class="skills-section" id="skills">
+        <button id="project-btn">
+            Explore Projects
+        </button>
 
-            <h2>Skills</h2>
+    </section>
 
-            <div class="skills-container">
+    <!-- ABOUT SECTION -->
 
-                <div class="skill-card">HTML</div>
+    <section class="about-section" id="about">
 
-                <div class="skill-card">CSS</div>
+        <h2>About Me</h2>
 
-                <div class="skill-card">JavaScript</div>
+        <p>
+            I am a passionate Full Stack Developer
+            interested in frontend development,
+            backend engineering, and database systems.
+        </p>
 
-                <div class="skill-card">Flask</div>
+    </section>
 
-                <div class="skill-card">MySQL</div>
+    <!-- SKILLS SECTION -->
 
-                <div class="skill-card">Git & GitHub</div>
+    <section class="skills-section" id="skills">
 
-            </div>
+        <h2>Skills</h2>
 
-        </section>
+        <div class="skills-container">
 
-    <!-- =========================
-         PROJECTS SECTION
-    ========================== -->
+            <div class="skill-card">HTML</div>
 
-        <section class="projects-section" id="projects">
+            <div class="skill-card">CSS</div>
 
-            <h2>Projects</h2>
+            <div class="skill-card">JavaScript</div>
+
+            <div class="skill-card">Flask</div>
+
+            <div class="skill-card">MySQL</div>
+
+            <div class="skill-card">Git & GitHub</div>
+
+            <div class="skill-card">Python</div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS SECTION -->
+
+    <section class="projects-section" id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="projects-container">
+
+            <!-- PROJECT 1 -->
 
             <div class="project-card">
 
-                <h3>Full Stack Portfolio Website</h3>
+                <h3>AI Fake News Detector</h3>
 
                 <p>
-                    A dynamic full-stack portfolio project
-                    built using HTML, CSS, JavaScript,
-                    Flask, and MySQL.
+                    Full-stack AI Fake News Detection
+                    system using NLP, Flask,
+                    PostgreSQL, and JavaScript.
                 </p>
 
-                <br>
+                <a href="https://github.com/krixPixel0o/AI-Fake-News-Detector-VeriNEWS"
+                   target="_blank">
 
-                <p>
-                    Features:
-                </p>
+                   View Repository
 
-                    <ul>
-                        <li>Responsive UI Design</li>
-                        <li>Flask Backend Integration</li>
-                        <li>MySQL Database Connectivity</li>
-                        <li>Contact Form Data Storage</li>
-                        <li>GitHub Version Control</li>
-                    </ul>
+                </a>
 
             </div>
 
-        </section>
+            <!-- PROJECT 2 -->
 
-    <!-- =========================
-         CONTACT SECTION
-    ========================== -->
+            <div class="project-card">
 
-        <section class="contact-section" id="contact">
+                <h3>Maze Game</h3>
 
-            <h2>Contact Me</h2>
-            {% if success %}
-            <div class="success-message">
-                {{ success }}
+                <p>
+                    Python-based maze game implementing
+                    DFS, BFS, and A* algorithms with
+                    intelligent enemy chasing mechanics.
+                </p>
+
+                <a href="https://github.com/krixPixel0o/MazeGame"
+                   target="_blank">
+
+                   View Repository
+
+                </a>
+
             </div>
-            {% endif %}
-            <form action = "/contact" method = "POST">
 
-                <input type="text"
-                       name = "name"
-                       placeholder="Enter your name">
+            <!-- PROJECT 3 -->
 
-                <input type="email"
-                       name = "email"
-                       placeholder="Enter your email">
+            <div class="project-card">
 
-                <textarea name = "message" 
-                          placeholder="Enter your message"></textarea>
+                <h3>Brain Tumor Classification CNN</h3>
 
-                <button type="submit">
-                  Send Message
-                </button>
+                <p>
+                    Deep Learning CNN project for
+                    brain tumor classification using
+                    image processing techniques.
+                </p>
 
-            </form>
+                <a href="https://github.com/krixPixel0o/Brain-Tumor-Classification-on-CNN"
+                   target="_blank">
 
-        </section>
-        <footer>
+                   View Repository
 
-            <p>
-                © 2026 Aniruddh | Full Stack Developer
-            </p>
+                </a>
 
-        </footer>
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+            </div>
 
-    </body>
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <h3>Portfolio Dashboard</h3>
+
+                <p>
+                    Python-based portfolio dashboard
+                    application showcasing projects
+                    and developer information.
+                </p>
+
+                <a href="https://github.com/krixPixel0o/portfolioDashboard"
+                   target="_blank">
+
+                   View Repository
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact-section" id="contact">
+
+        <h2>Contact Me</h2>
+
+        {% if success %}
+
+        <div class="success-message">
+
+            {{ success }}
+
+        </div>
+
+        {% endif %}
+
+        <form action="/contact" method="POST">
+
+            <input type="text"
+                   name="name"
+                   placeholder="Enter your name"
+                   required>
+
+            <input type="email"
+                   name="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <textarea name="message"
+                      placeholder="Enter your message"
+                      rows="6"
+                      required></textarea>
+
+            <button type="submit">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Aniruddh | Full Stack Developer
+        </p>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
 </html>

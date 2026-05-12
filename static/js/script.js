@@ -1,9 +1,10 @@
 console.log("Website Portfolio has been loaded and is running !");
 
-const projButton = document.querySelector("button");
+const projButton = document.querySelector("#project-btn");
 
 projButton.addEventListener("click", function () {
-    const projectSection = document.querySelector("#project-btn");
+
+    const projectSection = document.querySelector("#projects");
 
     projectSection.scrollIntoView({
         behavior: "smooth"

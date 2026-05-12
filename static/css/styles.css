@@ -244,3 +244,49 @@ footer{
 
     padding: 25px;
 }
+.projects-container{
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+}
+
+.project-card{
+
+    width: 320px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover{
+
+    transform: translateY(-10px);
+}
+
+.project-card a{
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    text-decoration: none;
+
+    background-color: black;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+}
+
+.project-card a:hover{
+
+    background-color: #02ff6b;
+
+    color: black;
+}
