@@ -220,3 +220,27 @@ nav ul li a:hover{
 
     transition: 0.3s;
 }
+.success-message{
+
+    background-color: #02ff6b;
+    color: black;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+footer{
+
+    background-color: black;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
