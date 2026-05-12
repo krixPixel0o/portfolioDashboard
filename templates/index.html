@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+
+        <title>La Portfolio</title>
+
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/styles.css')}}">
+
+
+    </head>
+
+    <body>
+
+        <nav>
+
+            <h1>La Portfolio</h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    <!-- =========================
+         HOME SECTION
+    ========================== -->
+
+        <section class="hero" id="home">
+
+            <h2>Hello, I am Aniruddh!</h2>
+
+            <p>
+                Full Stack Developer using
+                HTML, CSS, JavaScript, Flask, and MySQL
+            </p>
+
+            <button id="project-btn">
+                Explore Projects
+            </button>
+
+        </section>
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+
+        <section class="about-section" id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am a passionate Full Stack Developer
+                interested in frontend development,
+                backend engineering, and database systems.
+            </p>
+
+        </section>
+
+    <!-- =========================
+         SKILLS SECTION
+    ========================== -->
+
+        <section class="skills-section" id="skills">
+
+            <h2>Skills</h2>
+
+            <div class="skills-container">
+
+                <div class="skill-card">HTML</div>
+
+                <div class="skill-card">CSS</div>
+
+                <div class="skill-card">JavaScript</div>
+
+                <div class="skill-card">Flask</div>
+
+                <div class="skill-card">MySQL</div>
+
+                <div class="skill-card">Git & GitHub</div>
+
+            </div>
+
+        </section>
+
+    <!-- =========================
+         PROJECTS SECTION
+    ========================== -->
+
+        <section class="projects-section" id="projects">
+
+            <h2>Projects</h2>
+
+            <div class="project-card">
+
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    Full Stack portfolio project using
+                    Flask and MySQL.
+                </p>
+
+            </div>
+
+        </section>
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
+        <section class="contact-section" id="contact">
+
+            <h2>Contact Me</h2>
+
+            <form action = "/contact" method = "POST">
+
+                <input type="text"
+                       name = "name"
+                       placeholder="Enter your name">
+
+                <input type="email"
+                       name = "email"
+                       placeholder="Enter your email">
+
+                <textarea name = "message" 
+                          placeholder="Enter your message"></textarea>
+
+                <button type="submit">
+                  Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    </body>
+</html>

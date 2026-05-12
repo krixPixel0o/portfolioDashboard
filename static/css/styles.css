@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Comic Sans MS, cursive, sans-serif;
+    background-color: #025c80;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #02ff6b;
+    color: brown;
+
+    padding: 20px 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 27px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero{
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero button{
+    padding: 12px 25px;
+
+    border: none;
+
+    background-color: black;
+    color: white;
+
+    cursor: pointer;
+}
+
+.about-section{
+    padding: 100px 50px;
+    text-align: center;
+    background-color: #0d6a8a;
+    color: white;
+}
+
+.about-section h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-section p{
+    font-size: 20px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+.skills-section{
+    padding: 100px 50px;
+    background-color: #084c61;
+    color: white;
+    text-align: center;
+}
+
+.skills-section h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.skills-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card{
+    background-color: white;
+    color: black;
+
+    padding: 20px 40px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover{
+    transform: scale(1.1);
+}
+
+
+.projects-section{
+    padding: 100px 50px;
+    background-color: #0d6a8a;
+    color: white;
+    text-align: center;
+}
+
+.projects-section h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.project-card{
+    background-color: white;
+    color: black;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+
+.contact-section{
+    padding: 100px 50px;
+    background-color: #084c61;
+    color: white;
+    text-align: center;
+}
+
+.contact-section h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-section form{
+    max-width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section input,
+.contact-section textarea{
+
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.contact-section button{
+    padding: 15px;
+
+    border: none;
+
+    background-color: black;
+
+    color: white;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav ul li a{
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: yellow;
+}
+
+.hero button:hover,
+.contact-section button:hover{
+
+    background-color: white;
+    color: black;
+
+    transition: 0.3s;
+}
