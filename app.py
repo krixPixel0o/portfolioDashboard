@@ -16,19 +16,13 @@ a = Flask(__name__)
 def home() :
     return render_template("index.html")
 
-@a.route('/contact', methods = ['POST'])
-def contact() :
-    name = request.form['name']
-    email = request.form['email']
-    message = request.form['message']
+@a.route('/contact', methods=['POST'])
+def contact():
 
-    s = "INSERT INTO contacts (name, email, message) VALUES (%s, %s, %s)"
-
-    v = (name, email, message)
-    c.execute(s, v)
-    d.commit()
-
-    return render_template("index.html")
+    return render_template(
+        "index.html",
+        success="Message Sent Successfully!"
+    )
 
 if __name__ == "__main__" :
     a.run(host="0.0.0.0", port=5000)
